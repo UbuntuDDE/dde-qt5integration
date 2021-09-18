@@ -1,15 +1,15 @@
-Source: qt5integration
+Source: dde-qt5integration
 Section: devel
 Priority: optional
 Maintainer: Deepin Packages Builder <packages@deepin.com>
 Build-Depends:
- debhelper (>=9),
+ debhelper-compat (=13),
  qt5-qmake,
  qtbase5-dev,
  qtbase5-private-dev,
  libqt5xdg-dev,
- libdtkgui5.5-dev,
- libdtkwidget5.5-dev,
+ libdtkgui-dev (>=5.4.15~),
+ libdtkwidget-dev (>=5.4.36~),
  pkg-config,
  libqt5x11extras5-dev,
  libfontconfig1-dev,
@@ -20,16 +20,16 @@ Build-Depends:
  libmtdev-dev,
  libegl1-mesa-dev,
  libxrender-dev,
- libgtest-dev
-Standards-Version: 3.9.8
+ libgtest-dev,
+Standards-Version: 4.5.1
 
 Package: dde-qt5integration
 Architecture: any
 Provides: libqt5deepintheme-plugin
 Conflicts: libqt5deepintheme-plugin
 Depends: ${shlibs:Depends}, ${misc:Depends}, dde-qt5xcb-plugin, dde-qt5integration5, dde-qt5integration5.5
-Description: Qt platform theme integration plugin choosers for DDE
- Multiple Qt plugin choosers for DDE is included.
+Description: Qt platform theme integration plugins for DDE
+ Multiple Qt plugins to provide better Qt5 integration for DDE is included.
 
 Package: dde-qt5integration5.5
 Architecture: any

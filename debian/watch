@@ -1,0 +1,4 @@
+version=4
+opts="filenamemangle=s%(?:.*?)?v?(\d[\d.]*)\.tar\.gz%dde-qt5integration-$1.tar.gz%" \
+ https://github.com/linuxdeepin/qt5integration/tags \
+ (?:.*?/)?(\d[\d.]*)\.tar\.gz debian uupdate
